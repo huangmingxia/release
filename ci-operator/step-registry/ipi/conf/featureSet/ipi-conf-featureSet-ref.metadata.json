@@ -1,0 +1,11 @@
+{
+	"path": "ipi/conf/featureSet/ipi-conf-featureSet-ref.yaml",
+	"owners": {
+		"approvers": [
+			"jianlinliu",
+			"gpei",
+			"jianli-wei",
+			"huangmingxia"
+		]
+	}
+}
