@@ -4,6 +4,7 @@ workflow:
     pre:
     - chain: ipi-openstack-pre
     test:
+    - ref: wait
     - chain: openstack-test-e2e
     post:
     - chain: ipi-openstack-post
