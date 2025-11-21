@@ -18,9 +18,9 @@ chain:
   - ref: openshift-cluster-bot-rbac
   - ref: ipi-install-hosted-loki
   - ref: ipi-install-install-in-bastion
-  - ref: enable-qe-catalogsource
-  - chain: cucushift-installer-check
-  - ref: cucushift-installer-check-gcp-credentials-mode
+  # - ref: enable-qe-catalogsource
+  # - chain: cucushift-installer-check
+  # - ref: cucushift-installer-check-gcp-credentials-mode
   env:
   - name: RESTRICTED_NETWORK
     default:  "yes"

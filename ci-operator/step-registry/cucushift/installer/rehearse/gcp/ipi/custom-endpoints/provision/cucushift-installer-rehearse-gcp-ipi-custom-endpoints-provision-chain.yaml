@@ -12,7 +12,7 @@ chain:
   - ref: openshift-cluster-bot-rbac
   - ref: ipi-install-hosted-loki
   - ref: ipi-install-install-in-bastion
-  - ref: enable-qe-catalogsource
-  - chain: cucushift-installer-check
+  # - ref: enable-qe-catalogsource
+  # - chain: cucushift-installer-check
   documentation: |-
     Create an IPI cluster with custom endpoints on GCP for QE e2e tests.

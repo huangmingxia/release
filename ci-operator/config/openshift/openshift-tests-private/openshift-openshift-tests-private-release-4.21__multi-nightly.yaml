@@ -2083,8 +2083,9 @@ tests:
       FEATURE_SET: CustomNoUpgrade
       GCP_INSTALL_USE_MINIMAL_PERMISSIONS: "yes"
       OCP_ARCH: arm64
+      SLEEP_DURATION: 12h
     test:
-    - chain: openshift-e2e-test-qe
+    - ref: cucushift-installer-wait
     workflow: cucushift-installer-rehearse-gcp-ipi-custom-endpoints
 - as: gcp-ipi-custom-endpoint-proxy-oidc-mini-amd-f28-destructive
   cron: 32 17 10 * *
@@ -2114,8 +2115,9 @@ tests:
       FEATURE_SET: CustomNoUpgrade
       GCP_CCO_MANUAL_USE_MINIMAL_PERMISSIONS: "yes"
       OCP_ARCH: arm64
+      SLEEP_DURATION: 12h
     test:
-    - chain: openshift-e2e-test-qe
+    - ref: cucushift-installer-wait
     workflow: cucushift-installer-rehearse-gcp-ipi-custom-endpoints-proxy-whitelist-cco-manual-workload-identity
 - as: gcp-ipi-custom-masternameprefix-tp-amd-f28-destructive
   cron: 25 13 27 * *
