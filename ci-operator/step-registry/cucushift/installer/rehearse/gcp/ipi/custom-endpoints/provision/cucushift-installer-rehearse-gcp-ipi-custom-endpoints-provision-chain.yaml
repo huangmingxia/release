@@ -11,7 +11,7 @@ chain:
   - ref: ipi-install-rbac
   - ref: openshift-cluster-bot-rbac
   - ref: ipi-install-hosted-loki
-  - ref: ipi-install-install-in-bastion
+  # - ref: ipi-install-install-in-bastion
   # - ref: enable-qe-catalogsource
   # - chain: cucushift-installer-check
   documentation: |-
