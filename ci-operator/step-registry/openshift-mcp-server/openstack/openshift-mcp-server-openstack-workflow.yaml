@@ -1,0 +1,15 @@
+workflow:
+  as: openshift-mcp-server-openstack
+  steps:
+    allow_best_effort_post_steps: true
+    pre:
+    - chain: ipi-openstack-pre
+    - ref: openshift-mcp-server-install
+    post:
+    - chain: ipi-openstack-post
+    - ref: send-results-to-reportportal
+    env:
+      CONFIG_TYPE: "minimal"
+      BASE_DOMAIN: shiftstack.devcluster.openshift.com
+  documentation: |-
+    Provisions an OpenShift IPI cluster on OpenStack and installs MCPServer.

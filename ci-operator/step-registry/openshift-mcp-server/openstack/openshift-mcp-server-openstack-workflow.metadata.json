@@ -1,0 +1,17 @@
+{
+	"path": "openshift-mcp-server/openstack/openshift-mcp-server-openstack-workflow.yaml",
+	"owners": {
+		"approvers": [
+			"cali0707",
+			"kaustubh-pande",
+			"manusa",
+			"matzew"
+		],
+		"reviewers": [
+			"cali0707",
+			"kaustubh-pande",
+			"manusa",
+			"matzew"
+		]
+	}
+}
