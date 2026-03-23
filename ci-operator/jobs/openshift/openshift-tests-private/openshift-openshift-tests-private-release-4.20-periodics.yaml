@@ -17717,7 +17717,7 @@ periodics:
         secretName: result-aggregator
 - agent: kubernetes
   cluster: build09
-  cron: 17 2 6,13,20,29 * *
+  cron: 14 16 2,9,18,25 * *
   decorate: true
   decoration_config:
     skip_cloning: true
@@ -17732,7 +17732,7 @@ periodics:
     ci.openshift.io/generator: prowgen
     job-release: "4.20"
     pj-rehearse.openshift.io/can-be-rehearsed: "true"
-  name: periodic-ci-openshift-openshift-tests-private-release-4.20-amd64-nightly-aws-ipi-f7-longduration-hive-remaining
+  name: periodic-ci-openshift-openshift-tests-private-release-4.20-amd64-nightly-aws-ipi-f7-longduration-hive-spec
   reporter_config:
     slack:
       channel: '#forum-prow-hive-qe-ci'
@@ -17753,7 +17753,7 @@ periodics:
       - --oauth-token-path=/usr/local/github-credentials/oauth
       - --report-credentials-file=/etc/report/credentials
       - --secret-dir=/secrets/ci-pull-credentials
-      - --target=aws-ipi-f7-longduration-hive-remaining
+      - --target=aws-ipi-f7-longduration-hive-spec
       - --variant=amd64-nightly
       command:
       - ci-operator
@@ -17833,18 +17833,7 @@ periodics:
     ci.openshift.io/generator: prowgen
     job-release: "4.20"
     pj-rehearse.openshift.io/can-be-rehearsed: "true"
-  name: periodic-ci-openshift-openshift-tests-private-release-4.20-amd64-nightly-aws-ipi-f7-longduration-hive-sd-rosa
-  reporter_config:
-    slack:
-      channel: '#forum-prow-hive-qe-ci'
-      job_states_to_report:
-      - error
-      - failure
-      - success
-      report_template: '{{if eq .Status.State "success"}} :rainbow: Job *{{.Spec.Job}}*
-        ended with *{{.Status.State}}*. <{{.Status.URL}}|View logs> :rainbow: {{else}}
-        :volcano: Job *{{.Spec.Job}}* ended with *{{.Status.State}}*. <{{.Status.URL}}|View
-        logs> :volcano: {{end}}'
+  name: periodic-ci-openshift-openshift-tests-private-release-4.20-amd64-nightly-aws-ipi-f7-test1
   spec:
     containers:
     - args:
@@ -17854,7 +17843,7 @@ periodics:
       - --oauth-token-path=/usr/local/github-credentials/oauth
       - --report-credentials-file=/etc/report/credentials
       - --secret-dir=/secrets/ci-pull-credentials
-      - --target=aws-ipi-f7-longduration-hive-sd-rosa
+      - --target=aws-ipi-f7-test1
       - --variant=amd64-nightly
       command:
       - ci-operator
@@ -17919,7 +17908,7 @@ periodics:
         secretName: result-aggregator
 - agent: kubernetes
   cluster: build09
-  cron: 14 16 2,9,18,25 * *
+  cron: 17 2 6,13,20,29 * *
   decorate: true
   decoration_config:
     skip_cloning: true
@@ -17934,18 +17923,7 @@ periodics:
     ci.openshift.io/generator: prowgen
     job-release: "4.20"
     pj-rehearse.openshift.io/can-be-rehearsed: "true"
-  name: periodic-ci-openshift-openshift-tests-private-release-4.20-amd64-nightly-aws-ipi-f7-longduration-hive-spec
-  reporter_config:
-    slack:
-      channel: '#forum-prow-hive-qe-ci'
-      job_states_to_report:
-      - error
-      - failure
-      - success
-      report_template: '{{if eq .Status.State "success"}} :rainbow: Job *{{.Spec.Job}}*
-        ended with *{{.Status.State}}*. <{{.Status.URL}}|View logs> :rainbow: {{else}}
-        :volcano: Job *{{.Spec.Job}}* ended with *{{.Status.State}}*. <{{.Status.URL}}|View
-        logs> :volcano: {{end}}'
+  name: periodic-ci-openshift-openshift-tests-private-release-4.20-amd64-nightly-aws-ipi-f7-test2
   spec:
     containers:
     - args:
@@ -17955,7 +17933,7 @@ periodics:
       - --oauth-token-path=/usr/local/github-credentials/oauth
       - --report-credentials-file=/etc/report/credentials
       - --secret-dir=/secrets/ci-pull-credentials
-      - --target=aws-ipi-f7-longduration-hive-spec
+      - --target=aws-ipi-f7-test2
       - --variant=amd64-nightly
       command:
       - ci-operator
@@ -57574,7 +57552,7 @@ periodics:
     ci.openshift.io/generator: prowgen
     job-release: "4.20"
     pj-rehearse.openshift.io/can-be-rehearsed: "true"
-  name: periodic-ci-openshift-openshift-tests-private-release-4.20-arm64-nightly-aws-ipi-f7-longduration-workload
+  name: periodic-ci-openshift-openshift-tests-private-release-4.20-arm64-nightly-aws-ipi-f7-test1
   spec:
     containers:
     - args:
@@ -57584,7 +57562,7 @@ periodics:
       - --oauth-token-path=/usr/local/github-credentials/oauth
       - --report-credentials-file=/etc/report/credentials
       - --secret-dir=/secrets/ci-pull-credentials
-      - --target=aws-ipi-f7-longduration-workload
+      - --target=aws-ipi-f7-test1
       - --variant=arm64-nightly
       command:
       - ci-operator
